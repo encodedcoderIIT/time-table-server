@@ -1,0 +1,32 @@
+[
+  {
+    "day": "Monday",
+    "classes": [
+      { "subject": "ANN", "time": "11:00" },
+      { "subject": "DSML", "time": "14:00" }
+    ]
+  },
+  {
+    "day": "Tuesday",
+    "classes": [{ "subject": "DSA-Lab", "time": "16:00" }]
+  },
+  {
+    "day": "Wednesday",
+    "classes": [{ "subject": "ANN", "time": "11:00" }]
+  },
+  {
+    "day": "Thursday",
+    "classes": [
+      { "subject": "DSML", "time": "09:00" },
+      { "subject": "ANN", "time": "11:00" },
+      { "subject": "DSA", "time": "14:00" }
+    ]
+  },
+  {
+    "day": "Friday",
+    "classes": [
+      { "subject": "DSML", "time": "09:00" },
+      { "subject": "DSA", "time": "14:00" }
+    ]
+  }
+]
