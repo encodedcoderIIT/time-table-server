@@ -7,9 +7,9 @@ const cron = require("node-cron");
 const path = require("path");
 const fs = require("fs");
 
-// const serverUrl = "https://time-table-server-ixc6.onrender.com";
+const serverUrl = "https://time-table-server-ixc6.onrender.com";
 const port = 3000;
-const serverUrl = `http://localhost:${port}`;
+// const serverUrl = `http://localhost:${port}`;
 
 const app = express();
 app.use(bodyParser.json());
