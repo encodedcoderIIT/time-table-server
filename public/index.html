@@ -51,12 +51,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 1rem;
       }
       h1 {
         color: #333;
+        font-size: 2rem;
       }
       p {
         color: #666;
+        font-size: 1rem;
       }
       footer {
         background-color: #333;
@@ -64,26 +67,49 @@
         padding: 1rem;
         text-align: center;
       }
+      @media (max-width: 600px) {
+        header nav a {
+          display: block;
+          margin: 0.5rem 0;
+        }
+        h1 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.875rem;
+        }
+      }
     </style>
   </head>
   <body>
     <header>
       <nav>
         <a href="/"> <img src="images/home.gif" alt="" width="20rem" /> Home</a>
-        <a href="functions.html">Functions of the Server</a>
         <a href="https://encodedcoder-time-table.netlify.app/" target="_blank"
           >Client</a
         >
+        <a href="functions.html">Functions of the Server</a>
         <a href="https://encodedcoder.online" target="_blank">encodedcoder</a>
       </nav>
     </header>
     <div class="container">
       <h1>Welcome to the Time Table Server - encodedcoder</h1>
       <!-- <p>This is the server-side rendering homepage.</p> -->
-      <p><img src="images/Chart-run-cycle.gif" alt="Chart run cycle" /></p>
+      <p>
+        <img
+          src="images/Chart-run-cycle.gif"
+          alt="Chart run cycle"
+          style="max-width: 100%; height: auto"
+        />
+      </p>
       <h3>
         Server is up and running...
-        <img src="images/circle.gif" alt="" width="15rem" />
+        <img
+          src="images/circle.gif"
+          alt=""
+          width="15rem"
+          style="max-width: 100%; height: auto"
+        />
       </h3>
     </div>
     <footer>
@@ -91,7 +117,7 @@
         ©2024,
         <a
           href="https://encodedCoder.online"
-          style="color: rgb(82, 156, 177)"
+          style="color: rgb(77, 158, 193)"
           target="_blank"
           >encodedcoder</a
         >
@@ -101,7 +127,7 @@
         Wanna see the actual code, access
         <a
           href="https://github.com/encodedcoderIIT/time-table-server"
-          style="color: rgb(82, 156, 177)"
+          style="color: rgb(77, 158, 193)"
           target="_blank"
           >Source Code</a
         >
