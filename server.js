@@ -37,13 +37,17 @@ let subscriptions = [];
 // Load timetable
 const timetable = require("./timetable.json");
 
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, "public")));
+
 // Endpoint to get the public key
 app.get("/vapidPublicKey", (req, res) => {
   res.json({ publicKey: vapidPublicKey });
 });
 
+// Serve the homepage
 app.get("/", (req, res) => {
-  res.send("This is your time table server! Up and running...");
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Subscribe Route
@@ -83,19 +87,19 @@ cron.schedule("* * * * *", () => {
   const tenMinutesLater = new Date(now.getTime() + 10 * 60000);
   const tenMinutesLaterTime = tenMinutesLater.toTimeString().slice(0, 5); // Format HH:MM
 
-  console.log("Current Time:", currentTime);
-  console.log("Current Day:", currentDay);
-  console.log("10 Minutes Later:", tenMinutesLaterTime);
+  // console.log("Current Time:", currentTime);
+  // console.log("Current Day:", currentDay);
+  // console.log("10 Minutes Later:", tenMinutesLaterTime);
 
   timetable.forEach((daySchedule) => {
     if (daySchedule.day === currentDay) {
       daySchedule.classes.forEach((classInfo) => {
-        if (classInfo.time <= tenMinutesLaterTime) {
+        if (classInfo.time === tenMinutesLaterTime) {
           const payload = JSON.stringify({
             title: "Class Reminder",
             body: `You have ${classInfo.subject} class in the next 10 minutes.`,
-            icon: `${serverUrl}/images/encodedcoder.png`, // Absolute URL to the icon
-            badge: `${serverUrl}/images/encodedcoder.png`, // Absolute URL to the badge
+            icon: `${serverUrl}/images/encodedcoder.png`,
+            badge: `${serverUrl}/images/encodedcoder.png`,
           });
 
           subscriptions.forEach((subscription) => {

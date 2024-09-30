@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Table Server - Functions</title>
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/a/ACg8ocIxVDPHN0T-lwBgQuTwXHyWHD2Wy55-V-IbEaOFydzxTYkTnkYW=s360-c-no"
+      type="image/x-icon"
+    />
+    <!-- Default favicon -->
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/a/ACg8ocIxVDPHN0T-lwBgQuTwXHyWHD2Wy55-V-IbEaOFydzxTYkTnkYW=s360-c-no"
+      type="image/png"
+    />
+    <!-- PNG format -->
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/a/ACg8ocIxVDPHN0T-lwBgQuTwXHyWHD2Wy55-V-IbEaOFydzxTYkTnkYW=s360-c-no"
+      type="image/svg+xml"
+    />
+    <!-- SVG format -->
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        background-color: #dde5ff;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      header nav a {
+        color: white;
+        margin: 0 1rem;
+        text-decoration: none;
+      }
+      .container {
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        color: #666;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/"> <img src="images/home.gif" alt="" width="20rem" /> Home</a>
+        <a href="functions.html">Functions of the Server</a>
+        <a href="https://encodedcoder-time-table.netlify.app/" target="_blank"
+          >Client</a
+        >
+        <a href="https://encodedcoder.online" target="_blank">encodedcoder</a>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>Key Functionalities of the Time Table Server</h1>
+      <p>This page describes the key functionalities of the server.</p>
+      <ul style="text-align: left; margin: 0 auto; max-width: 600px">
+        <li>
+          <strong>Push Notifications:</strong> The server sends push
+          notifications to subscribed users about upcoming classes.
+        </li>
+        <li>
+          <strong>Subscription Management:</strong> The server handles
+          subscription and unsubscription requests from users.
+        </li>
+        <li>
+          <strong>Timetable Management:</strong> The server manages and serves
+          the timetable data to the client.
+        </li>
+        <li>
+          <strong>Service Worker Registration:</strong> The server helps in
+          registering the service worker for push notifications.
+        </li>
+        <li>
+          <strong>VAPID Key Management:</strong> The server manages VAPID keys
+          for secure push notifications.
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <div>
+        ©2024,
+        <a
+          href="https://encodedCoder.online"
+          style="color: rgb(82, 156, 177)"
+          target="_blank"
+          >encodedcoder</a
+        >
+        (Suresh)
+      </div>
+      <div>
+        Wanna see the actual code, access
+        <a
+          href="https://github.com/encodedcoderIIT/time-table-server"
+          style="color: rgb(82, 156, 177)"
+          target="_blank"
+          >Source Code</a
+        >
+        here.
+      </div>
+    </footer>
+  </body>
+</html>

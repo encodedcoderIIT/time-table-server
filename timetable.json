@@ -2,14 +2,6 @@
   {
     "day": "Monday",
     "classes": [
-      { "subject": "A", "time": "01:50" },
-      { "subject": "B", "time": "02:50" },
-      { "subject": "C", "time": "03:50" },
-      { "subject": "D", "time": "04:50" },
-      { "subject": "E", "time": "05:50" },
-      { "subject": "F", "time": "06:50" },
-      { "subject": "G", "time": "07:50" },
-      { "subject": "H", "time": "08:50" },
       { "subject": "ANN", "time": "11:00" },
       { "subject": "DSML", "time": "14:00" }
     ]
