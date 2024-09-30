@@ -32,7 +32,7 @@ webpush.setVapidDetails(
 console.log("Public Key:", vapidPublicKey);
 
 // Store subscriptions
-let subscriptions = [];
+let subscriptions = {};
 
 // Load timetable
 const timetable = require("./timetable.json");
@@ -54,7 +54,14 @@ app.get("/", (req, res) => {
 app.post("/subscribe", (req, res) => {
   try {
     const subscription = req.body;
-    subscriptions.push(subscription);
+    const endpoint = subscription.endpoint;
+
+    if (Object.keys(subscriptions).includes(endpoint)) {
+      console.log("User already subscribed");
+      return;
+    }
+
+    subscriptions[endpoint] = subscription;
 
     // Log the new subscription
     console.log("New subscription added:", subscription);
@@ -86,10 +93,6 @@ cron.schedule("* * * * *", () => {
   const currentTime = now.toTimeString().slice(0, 5); // Format HH:MM
   const tenMinutesLater = new Date(now.getTime() + 10 * 60000);
   const tenMinutesLaterTime = tenMinutesLater.toTimeString().slice(0, 5); // Format HH:MM
-
-  // console.log("Current Time:", currentTime);
-  // console.log("Current Day:", currentDay);
-  // console.log("10 Minutes Later:", tenMinutesLaterTime);
 
   timetable.forEach((daySchedule) => {
     if (daySchedule.day === currentDay) {
